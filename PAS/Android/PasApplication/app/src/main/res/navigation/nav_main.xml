@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.pasapplication.View.Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailesFragments"
+            app:destination="@id/detailesFragments" />
+    </fragment>
+    <fragment
+        android:id="@+id/clearFragment"
+        android:name="com.example.pasapplication.View.Fragments.ClearFragment"
+        android:label="fragment_clear"
+        tools:layout="@layout/fragment_clear" />
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.pasapplication.View.Fragments.UpdateFragment"
+        android:label="fragment_update"
+        tools:layout="@layout/fragment_update" />
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.example.pasapplication.View.Fragments.AddProductFragment"
+        android:label="fragment_add_product"
+        tools:layout="@layout/fragment_add_product" >
+        <action
+            android:id="@+id/action_addProductFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailesFragments"
+        android:name="com.example.pasapplication.View.Fragments.DetailesFragments"
+        android:label="fragment_detailes_fragments"
+        tools:layout="@layout/fragment_detailes_fragments" >
+        <argument
+            android:name="IdProduct"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_detailesFragments_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

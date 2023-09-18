@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Fragments.AddProductFragment">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Insert Product"
+        android:textSize="29sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="152dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/verbosabot"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/name_serverText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="Name Server"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/EditNameServer"
+        android:layout_width="174dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Name Server"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/name_serverText"
+        app:layout_constraintTop_toBottomOf="@+id/name_serverText" />
+
+    <TextView
+        android:id="@+id/name_user_discordtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Name User Discord"
+        app:layout_constraintStart_toEndOf="@+id/EditNameServer"
+        app:layout_constraintTop_toTopOf="@+id/name_serverText" />
+
+    <EditText
+        android:id="@+id/EditUserDiscord"
+        android:layout_width="166dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Name Discord"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/name_user_discordtext"
+        app:layout_constraintTop_toBottomOf="@+id/name_user_discordtext" />
+
+    <TextView
+        android:id="@+id/id_server_discordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Id Server Discord"
+        app:layout_constraintStart_toStartOf="@+id/EditNameServer"
+        app:layout_constraintTop_toBottomOf="@+id/EditNameServer" />
+
+    <EditText
+        android:id="@+id/EditServerId"
+        android:layout_width="177dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Id Server"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/EditNameServer"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/id_server_discordText"
+        app:layout_constraintTop_toBottomOf="@+id/id_server_discordText" />
+
+    <TextView
+        android:id="@+id/id_user_discordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Id User Discord"
+        app:layout_constraintStart_toEndOf="@+id/EditServerId"
+        app:layout_constraintTop_toTopOf="@+id/id_server_discordText" />
+
+    <EditText
+        android:id="@+id/EditIdUser"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Id Name Discord"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/EditUserDiscord"
+        app:layout_constraintStart_toStartOf="@+id/id_user_discordText"
+        app:layout_constraintTop_toBottomOf="@+id/id_user_discordText" />
+
+    <TextView
+        android:id="@+id/MesDePremium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Meses de Premium"
+        app:layout_constraintEnd_toEndOf="@+id/EditIdUser"
+        app:layout_constraintStart_toStartOf="@+id/EditServerId"
+        app:layout_constraintTop_toBottomOf="@+id/EditIdUser" />
+
+    <EditText
+        android:id="@+id/EditMesPremium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Mes de Premium"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/MesDePremium"
+        app:layout_constraintHorizontal_bias="0.642"
+        app:layout_constraintStart_toStartOf="@+id/MesDePremium"
+        app:layout_constraintTop_toBottomOf="@+id/MesDePremium" />
+
+    <Button
+        android:id="@+id/CancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/EditServerId"
+        app:layout_constraintTop_toTopOf="@+id/SaveBtn"
+        />
+
+    <Button
+        android:id="@+id/SaveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Save"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/EditIdUser"
+        app:layout_constraintTop_toBottomOf="@+id/EditMesPremium" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

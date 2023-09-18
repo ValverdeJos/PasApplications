@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Web Site PAS</title>
+    <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Botão para abrir a barra de navegação lateral -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    
+    <!-- Inicio Barra de navegação lateral -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#"> <i class="fas fa-home"></i> Página Inicial</a>
+        <a href="#" onclick="openSearch()"><i class="fas fa-search"></i>Search</a>
+        <a href="#" onclick="openPopup()"><i class="fas fa-plus"></i>New Product</a>
+    </div>
+    <!-- Fim Barra de navegação lateral -->
+
+
+    <!-- Inicio Tabela dos Product -->
+    <div id="main">
+        <table id="tabela">
+            <!-- Cabeçalho da tabela será adicionado aqui -->
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+        
+                </tr>
+            </thead>
+            <!-- Corpo da tabela será adicionado aqui -->
+            <tbody>
+                <!-- Os dados serão adicionados aqui -->
+            </tbody>
+        </table>
+    </div>
+    <!-- Fim Tabela dos Product -->
+
+    
+    <!-- Incio Do Add Product -->
+    <div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="popup-close" onclick="closePopup()">&times;</span>
+        <h2>Adicionar um novo produto</h2>
+        <form id="newProductForm">
+            <label for="productName">Nome do produto:</label>
+            <select id="productName" name="productName" required>
+                <option value="1">Verbosa</option>
+                <option value="2">WebDesign</option>
+                <option value="3">App</option>
+            </select>
+
+            <label for="productDescription">Descrição:</label>
+            <textarea id="productDescription" name="productDescription" rows="4" required></textarea>
+
+            <label for="mesPremium">Meses Premium:</label>
+            <input type="number" id="mesPremium" name="mesPremium" required>
+
+            <label for="idServe">ID do servidor:</label>
+            <input type="text" id="idServe" name="idServe" required>
+
+            <label for="nameServe">Nome do servidor:</label>
+            <input type="text" id="nameServe" name="nameServe" required>
+
+            <label for="idUserServe">ID do usuário do servidor:</label>
+            <input type="text" id="idUserServe" name="idUserServe" required>
+
+            <label for="nameUserDiscord">Nome do usuário do Discord:</label>
+            <input type="text" id="nameUserDiscord" name="nameUserDiscord" required>
+
+            <label for="priority">Prioridade:</label>
+            <select id="priority" name="priority" required>
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+            </select>
+
+            <button type="button" onclick="addNewProduct()">Adicionar</button>
+        </form>
+    </div>
+    </div>
+    <!-- Fim Do Add Product -->
+
+
+
+    <!-- Incio Do Search Product -->
+    <div id="searchPopup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closeSearch()">&times;</span>
+            <h2>Procurar um produto pelo o numero de Compra</h2>
+            <form>
+                <label for="searchIdCompra">Numero de Compra :</label>
+                <input type="text" id="searchIdCompra" name="searchIdCompra" required>
+    
+                <button type="button" onclick="searchProduct()">Rechercher</button>
+            </form>
+        </div>
+    </div>
+    <!-- Fim Do Search Product -->
+
+
+
+    <!-- Incio Do Search Product Result -->
+    <div id="searchResultPopup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closeSearchResultPopup()">&times;</span>
+            <h2>Resultado da Pesquisa</h2>
+            <div id="searchResultContent">
+                
+            </div>
+        </div>
+    </div>
+    <!-- Fim Do Search Product Result -->
+
+
+
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="Main.js"></script>
+    <script>
+        fetchData();
+    </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+
+#tabela {
+    font-family: Arial, sans-serif;
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+}
+
+#tabela th,
+#tabela td {
+    border: 1px solid #dddddd;
+
+    text-align: left;
+    padding: 8px;
+}
+
+#tabela th {
+    background-color: #f2f2f2;
+
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+h1 {
+    font-size: 24px;
+
+    color: #333;
+
+}
+
+p {
+    font-size: 16px;
+
+    color: #666;
+
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #333;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.2s;
+}
+
+.sidenav a:hover {
+    color: #f2f2f2;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+#main {
+    transition: margin-left .3s;
+    padding: 16px;
+}
+
+
+.sidenav.open {
+    left: 0;
+}
+.sidenav a .icon-text-spacing {
+    margin-right: 15px;
+    
+}
+
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+label {
+    flex-basis: 30%;
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+
+input[type="text"],
+input[type="number"] {
+    flex-basis: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+
+select option {
+    padding: 5px;
+    font-size: 14px;
+}
+
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+
+.popup-content {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
